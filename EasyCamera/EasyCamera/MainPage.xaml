@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EasyCamera"
+             x:Class="EasyCamera.MainPage"
+>
+    <ScrollView>
+        <StackLayout Spacing="10" Padding="10">
+            <Button x:Name="takePhoto" Clicked="takePhoto_Clicked" Text="Take Photo"/>
+            <Button x:Name="pickPhoto" Text="Pick Photo" Clicked="pickPhoto_Clicked"/>
+            <Button x:Name="takeVideo" Text="Take Video" Clicked="takeVideo_Clicked"/>
+            <Button x:Name="pickVideo" Text="Pick Video" Clicked="pickVideo_Clicked"/>
+            <StackLayout Orientation="Horizontal">
+                <Label>Latitude: </Label>
+                <Label x:Name="latitude" />
+                <Label>, Longitude: </Label>
+                <Label x:Name="longitude" />
+            </StackLayout>
+            <Image x:Name="image"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

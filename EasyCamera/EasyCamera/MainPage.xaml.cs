@@ -5,14 +5,21 @@ using Xamarin.Forms;
 using System.IO;
 using ExifLib;
 using Plugin.Media.Abstractions;
+using EasyCamera.Views;
+using System.Collections.Generic;
+using EasyCamera.Data;
 
 namespace EasyCamera
 {
     public partial class MainPage : ContentPage
     {
+        List<PhotoMetadata> photos;
+
         public MainPage()
         {
             InitializeComponent();
+
+            photos = new List<PhotoMetadata>();
         }
 
         private async void takePhoto_Clicked(object sender, EventArgs e)
@@ -30,6 +37,11 @@ namespace EasyCamera
                 Name = "test.jpg"
             });
 
+            var modal = new PhotoDetailsView();
+            //await Navigation.PushModalAsync(modal, false);
+            
+            //await Navigation.PopModalAsync(true);
+
             if (file == null)
                 return;
 
@@ -43,6 +55,8 @@ namespace EasyCamera
                 file.Dispose();
                 return stream;
             });
+
+            photos.Add(new PhotoMetadata { Latitude = Convert.ToDouble(latitude.Text), Longitude = Convert.ToDouble(longitude.Text), FileName = "Photo.jpg", Timestamp = DateTime.Now });
         }
 
         private void GetPhotoLocation(MediaFile file)

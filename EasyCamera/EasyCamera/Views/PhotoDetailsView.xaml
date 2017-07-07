@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EasyCamera.Views.PhotoDetailsView"
+             BackgroundColor="#303030"
+>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                TextColor="White"
+                BackgroundColor="Transparent"                
+                Text="Please enter a name for this photo"
+             />
+
+            <TextCell
+                x:Name="photoName"
+                TextColor="White"
+                DetailColor="Transparent"
+             />
+
+            <Button x:Name="recordName" Clicked="recordName_Clicked">Dismiss</Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

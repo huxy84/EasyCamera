@@ -20,3 +20,5 @@ C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\bin\Debug\Plugin.Media.A
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\bin\Debug\Plugin.Media.Abstractions.xml
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\bin\Debug\ExifLib.dll
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\obj\Debug\EasyCamera.csprojResolveAssemblyReference.cache
+C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\obj\Debug\EasyCamera.Views.CameraView.xaml.g.cs
+C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\obj\Debug\EasyCamera.Views.PhotoDetailsView.xaml.g.cs

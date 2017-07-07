@@ -8,8 +8,8 @@
         <StackLayout Spacing="10" Padding="10">
             <Button x:Name="takePhoto" Clicked="takePhoto_Clicked" Text="Take Photo"/>
             <Button x:Name="pickPhoto" Text="Pick Photo" Clicked="pickPhoto_Clicked"/>
-            <Button x:Name="takeVideo" Text="Take Video" Clicked="takeVideo_Clicked"/>
-            <Button x:Name="pickVideo" Text="Pick Video" Clicked="pickVideo_Clicked"/>
+            <!--<Button x:Name="takeVideo" Text="Take Video" Clicked="takeVideo_Clicked"/>
+            <Button x:Name="pickVideo" Text="Pick Video" Clicked="pickVideo_Clicked"/>-->
             <StackLayout Orientation="Horizontal">
                 <Label>Latitude: </Label>
                 <Label x:Name="latitude" />
@@ -17,6 +17,14 @@
                 <Label x:Name="longitude" />
             </StackLayout>
             <Image x:Name="image"/>
+
+            <!--<ListView ItemsSource="photos">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell ImageSource="" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
         </StackLayout>
     </ScrollView>
 </ContentPage>

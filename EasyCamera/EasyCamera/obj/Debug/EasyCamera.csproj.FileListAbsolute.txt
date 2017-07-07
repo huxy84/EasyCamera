@@ -8,7 +8,6 @@ C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\bin\Debug\Xamarin.Forms.
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\bin\Debug\Xamarin.Forms.Platform.pdb
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\obj\Debug\EasyCamera.csprojResolveAssemblyReference.cache
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\obj\Debug\EasyCamera.MainPage.xaml.g.cs
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\obj\Debug\EasyCamera.App.xaml.g.cs
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\obj\Debug\EasyCamera.dll
@@ -20,3 +19,4 @@ C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\bin\Debug\Plugin.Media.x
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\bin\Debug\Plugin.Media.Abstractions.pdb
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\bin\Debug\Plugin.Media.Abstractions.xml
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\bin\Debug\ExifLib.dll
+C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera\obj\Debug\EasyCamera.csprojResolveAssemblyReference.cache

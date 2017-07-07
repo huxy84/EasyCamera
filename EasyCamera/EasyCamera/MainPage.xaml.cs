@@ -1,12 +1,10 @@
 ﻿using Plugin.Media;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.IO;
 using ExifLib;
+using Plugin.Media.Abstractions;
 
 namespace EasyCamera
 {
@@ -34,17 +32,8 @@ namespace EasyCamera
 
             if (file == null)
                 return;
-            
-            
 
-            //var test = Encoding.UTF8.GetBytes(file.Path);
-
-            //var strTest = Encoding.UTF8.GetString(test, 0, test.Length);
-
-            //var start = strTest.IndexOf("xmpmeta");
-            //var end = strTest.IndexOf("</x:xmpmeta>") + 12;
-
-            //var justTheMeta = strTest.Substring(start, end - start);
+            GetPhotoLocation(file);
 
             await DisplayAlert("File Location", file.Path, "OK");
             
@@ -56,11 +45,49 @@ namespace EasyCamera
             });
         }
 
-        /*private string GetPhotoGps(FileInfo fi)
+        private void GetPhotoLocation(MediaFile file)
         {
-            FileStream
-            return "";
-        }*/
+            using (Stream photo = file.GetStream())
+            {
+                var picture = ExifReader.ReadJpeg(photo);
+                ExifOrientation orientation = picture.Orientation;
+                ExifGpsLatitudeRef latRef = picture.GpsLatitudeRef;
+                ExifGpsLongitudeRef longRef = picture.GpsLongitudeRef;
+
+                latitude.Text = GetLatitude(latRef, picture.GpsLatitude).ToString();
+                longitude.Text = GetLongitude(picture.GpsLongitude).ToString();
+            }
+        }
+
+        private double GetLatitude(ExifGpsLatitudeRef latRef, double [] data)
+        {
+            double degrees = data[0];
+            double minutes = data[1];
+            double seconds = data.Length > 2 ? data[2] : 0.0;
+
+            double result = ConvertDegreeToAngle(degrees, minutes, seconds);
+
+            if (latRef == ExifGpsLatitudeRef.South)
+                result *= -1;
+
+            return result;
+        }
+
+        private double GetLongitude(double[] data)
+        {
+            double degrees = data[0];
+            double minutes = data[1];
+            double seconds = data.Length > 2 ? data[2] : 0.0;
+
+            double result = ConvertDegreeToAngle(degrees, minutes, seconds);
+
+            return result;
+        }
+
+        private double ConvertDegreeToAngle(double degrees, double minutes, double seconds)
+        {
+            return degrees + (minutes / 60) + (seconds / 3600);
+        }
 
         private async void pickPhoto_Clicked(object sender, EventArgs e)
         {
@@ -78,37 +105,46 @@ namespace EasyCamera
             if (file == null)
                 return;
 
+            GetPhotoLocation(file);
+
             image.Source = ImageSource.FromStream(() =>
             {
                 var stream = file.GetStream();
                 file.Dispose();
                 return stream;
             });
+            
+            //using (StreamReader sr = new StreamReader(file.GetStream()))
+            //{
+            //    var picStr = sr.ReadToEnd();
+            //    var bytes = Encoding.UTF8.GetBytes(picStr);
+            //}
 
-            using (Stream photo = file.GetStream())
+            /*using (Stream photo = file.GetStream())
             {
                 var picture = ExifReader.ReadJpeg(photo);
                 ExifOrientation orientation = picture.Orientation;
 
                 latitude.Text = GetGpsCoordinate(picture.GpsLatitude);
                 longitude.Text = GetGpsCoordinate(picture.GpsLongitude);
-            }
+            }*/
         }
 
-        private string GetGpsCoordinate(double[] data)
-        {
-            if (!data.Any())
-                return string.Empty;
+        //private string GetGpsCoordinate(double[] data)
+        //{
+        //    if (!data.Any())
+        //        return string.Empty;
+        //    int index = 0;
 
-            string str = data.First() + ".";
+        //    string str = data.First() + ".";
 
-            for (int i = 1; i < data.Length; i++)
-            {
-                str += data[i];
-            }
+        //    for (int i = 1; i < data.Length; i++)
+        //    {
+        //        str += BitConverter.ToUInt32(data[i], index).ToString();
+        //    }
 
-            return str;
-        }
+        //    return str;
+        //}
 
         private async void takeVideo_Clicked(object sender, EventArgs e)
         {

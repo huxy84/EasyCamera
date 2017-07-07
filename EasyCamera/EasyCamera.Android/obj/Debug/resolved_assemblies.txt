@@ -41,7 +41,6 @@ C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera.Android\obj\Debug\androi
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera.Android\obj\Debug\android\assets\System.Threading.Tasks.dll
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera.Android\obj\Debug\android\assets\System.IO.dll
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera.Android\obj\Debug\android\assets\ExifLib.dll
-C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera.Android\obj\Debug\android\assets\System.Linq.dll
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera.Android\obj\Debug\android\assets\System.Runtime.Extensions.dll
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera.Android\obj\Debug\android\assets\System.Globalization.dll
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera.Android\obj\Debug\android\assets\System.Collections.dll
@@ -52,6 +51,7 @@ C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera.Android\obj\Debug\androi
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera.Android\obj\Debug\android\assets\System.Linq.Expressions.dll
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera.Android\obj\Debug\android\assets\System.Dynamic.Runtime.dll
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera.Android\obj\Debug\android\assets\System.Threading.dll
+C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera.Android\obj\Debug\android\assets\System.Linq.dll
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera.Android\obj\Debug\android\assets\System.Reflection.Extensions.dll
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera.Android\obj\Debug\android\assets\System.Net.Http.dll
 C:\Development\Xamarin\EasyCamera\EasyCamera\EasyCamera.Android\obj\Debug\android\assets\System.Runtime.Serialization.dll
